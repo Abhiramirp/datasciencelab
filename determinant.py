@@ -9,7 +9,7 @@ matrix = []
 for i in range(rows):
     row = []
     for j in range(cols):
-        element = int(input("Enter element for position ({i}, {j}): "))
+        element = int(input(f"Enter element for position ({i}, {j}): "))
         row.append(element)
     matrix.append(row)
 
