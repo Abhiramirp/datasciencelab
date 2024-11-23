@@ -7,8 +7,9 @@ bpoints=np.array([6,10,17])
 
 plt.plot(apoints,bpoints,'g',label="student")
 plt.plot(xpoints,ypoints,'r',label="teacher")
-leg=plt.legend()
+
 plt.xlabel("x axis")
 plt.ylabel("y axis")
+plt.legend()
 plt.title("STUDENT TEACHER PERFORMANCE GRAPH")
 plt.show()
