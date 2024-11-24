@@ -2,8 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
-import matplotlib.pyplot as plt
-from sklearn import tree
 
 # Load Iris dataset from CSV
 iris = pd.read_csv('iris.csv')
@@ -36,13 +34,18 @@ sample = [[a, b, c, d]]
 pred = dt.predict(sample)
 print("Prediction for the given sample: ", pred)
 
+
+
 # Visualization
+import matplotlib.pyplot as plt
+from sklearn import tree
+
 plt.figure(figsize=(12, 12))
 
 # Replace feature and class names with actual values
 feature_names = iris.columns[:-1]  # Feature names are all columns except the last one
 class_names = iris[y.name].unique()  # Unique target names from the target column
 
-tree.plot_tree(dt, filled=True, feature_names=feature_names, class_names=class_names)
+tree.plot_tree(dt,  filled=True,feature_names=feature_names, class_names=class_names)
 plt.title("Decision Tree Visualization")
 plt.show()
