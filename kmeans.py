@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 
 iris = pd.read_csv('iris.csv')
+
 x = iris.iloc[:,:-1].values
 
 # Set n_clusters to 3 since the Iris dataset has 3 species
@@ -26,7 +27,5 @@ c = float(input("Enter petal length in cm: "))
 d = float(input("Enter petal width in cm: "))
 
 sample = np.array([[a, b, c, d]])
-
-# Predict the cluster for the input values
-predicted_cluster = kmeans.predict(sample)
-print("The input belongs to Cluster:", predicted_cluster[0])
+pred= kmeans.predict(sample)
+print("The input belongs to Cluster:", pred[0]+1)
